@@ -71,6 +71,7 @@ public class WordCombinerTests
             new object[] { new string[] { "oobar", "foobar", "f" }, "foobar" },
             new object[] { new string[] { "foobar", "obar", "fo" }, "foobar" },
             new object[] { new string[] { "foobar", "oobar", "f" }, "foobar" },
+            new object[] { new string[] { "lol", "fo", "obar", "foobar" }, "foobar" },
         };
 
     public static IEnumerable<object[]> MultipleWordsCombinations =>
@@ -79,6 +80,8 @@ public class WordCombinerTests
             // two word combinations
             new object[] { new string[] { "f", "o", "obar", "foobar" }, "foobar" },
             new object[] { new string[] { "f", "o", "o", "bar", "foobar" }, "foobar" },
+            new object[] { new string[] { "o", "f", "o", "bar", "foobar" }, "foobar" },
+            new object[] { new string[] { "zam", "bia", "ted", "zambia" }, "zambia" },
 
         };
 }
