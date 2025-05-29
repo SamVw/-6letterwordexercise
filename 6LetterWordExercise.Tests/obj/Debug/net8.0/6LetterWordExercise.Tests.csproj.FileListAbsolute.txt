@@ -97,3 +97,11 @@
 /home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/obj/Debug/net8.0/6LetterWordExercise.Tests.pdb
 /home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/obj/Debug/net8.0/6LetterWordExercise.Tests.genruntimeconfig.cache
 /home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/obj/Debug/net8.0/ref/6LetterWordExercise.Tests.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_6LetterWordExercise.Tests
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/6LetterWordExercise.deps.json
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/6LetterWordExercise.runtimeconfig.json
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/6LetterWordExercise
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/Resources/input.txt
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/FluentAssertions.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/6LetterWordExercise.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/bin/Debug/net8.0/6LetterWordExercise.pdb

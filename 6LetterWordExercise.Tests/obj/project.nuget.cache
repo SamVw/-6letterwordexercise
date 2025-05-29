@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "g+svrtx8HcTZz4oMBHb+v3YYcYv4OaAaL/4I7bziykHOvBpQM9zIPcfs42YdaR7t/3pPzLTgTT6pBBIP2Cb3gw==",
+  "dgSpecHash": "2Ucj06m9IC7jsz4EHwXIyZKyCzS+RJkNzUWBkrLjSKuOt/YYPFK0SnxACLWpiOEizGe8TTuUi0wP17ozNgCQuw==",
   "success": true,
   "projectFilePath": "/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise.Tests/6LetterWordExercise.Tests.csproj",
   "expectedPackageFiles": [
     "/home/samvw/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/home/samvw/.nuget/packages/fluentassertions/8.3.0/fluentassertions.8.3.0.nupkg.sha512",
     "/home/samvw/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
     "/home/samvw/.nuget/packages/microsoft.net.test.sdk/17.6.0/microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "/home/samvw/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",

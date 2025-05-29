@@ -1,0 +1,16 @@
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/bin/Debug/net8.0/6LetterWordExercise
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/bin/Debug/net8.0/6LetterWordExercise.deps.json
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/bin/Debug/net8.0/6LetterWordExercise.runtimeconfig.json
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/bin/Debug/net8.0/6LetterWordExercise.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/bin/Debug/net8.0/6LetterWordExercise.pdb
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.GeneratedMSBuildEditorConfig.editorconfig
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.AssemblyInfoInputs.cache
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.AssemblyInfo.cs
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.csproj.CoreCompileInputs.cache
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.sourcelink.json
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/refint/6LetterWordExercise.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.pdb
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/6LetterWordExercise.genruntimeconfig.cache
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/obj/Debug/net8.0/ref/6LetterWordExercise.dll
+/home/samvw/Projects/-6letterwordexercise/6LetterWordExercise/bin/Debug/net8.0/Resources/input.txt
