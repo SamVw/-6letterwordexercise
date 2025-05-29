@@ -1,6 +1,6 @@
 public class WordsCombiner()
 {
-    public List<WordCombination> FindCombinations(IEnumerable<string> words, int wordLength = 6)
+    public IReadOnlyList<WordCombination> FindCombinations(IEnumerable<string> words, int wordLength = 6)
     {
         // Check if any input provided
         if (words.Count() == 0)
@@ -41,12 +41,9 @@ public class WordsCombiner()
             }
         }
 
+        // Make sure we only return a distinct result set
         return result.DistinctBy(r => r.Combination).ToList();
     }
-}
-
-public record WordCombination(List<string> Words, string Combination)
-{
 }
 
 //  Algorithm
