@@ -1,12 +1,10 @@
 ﻿
-// Implement in FileReader class or something like that
-// Read as stream
-var lines = await File.ReadAllLinesAsync("Resources/input.txt");
+IWordsProvider wordsProvider = new FileWordsProvider("Resources/input.txt");
+var words = await wordsProvider.GetWords();
 
-var combiner = new WordsCombiner(lines);
+var wordsCombiner = new WordsCombiner();
 
-var combinations = combiner.FindCombinations();
+var combinations = wordsCombiner.FindCombinations(words);
 
 IWordCombinationPrinter printer = new ConsoleWordCombinationPrinter();
-foreach (var combination in combinations)
-    printer.Print(combination);
+printer.Print(combinations);

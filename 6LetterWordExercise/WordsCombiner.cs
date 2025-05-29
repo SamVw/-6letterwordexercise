@@ -1,22 +1,30 @@
-public class WordsCombiner(string[] words)
+public class WordsCombiner()
 {
-    public List<WordCombination> FindCombinations(int wordLength = 6)
+    public List<WordCombination> FindCombinations(IEnumerable<string> words, int wordLength = 6)
     {
+        // Check if any input provided
         if (words.Count() == 0)
             return [];
 
-        Console.WriteLine($"Found {words.Count()} words");
+        var distinctWords = words.Distinct().ToArray();
+
+        Console.WriteLine($"Found {distinctWords.Count()} words");
 
         var result = new List<WordCombination>();
-        for (int currentWordIndex = 0; currentWordIndex < words.Length; currentWordIndex++)
+
+        // Loop over all words of specified length
+        for (int currentWordIndex = 0; currentWordIndex < distinctWords.Length; currentWordIndex++)
         {
-            var wordToFind = words[currentWordIndex];
+            var wordToFind = distinctWords[currentWordIndex];
             if (wordToFind.Length != wordLength)
                 continue;
 
             Console.WriteLine($"Currently searching word {wordToFind} at index {currentWordIndex}");
 
+            // Only use words shorter than the length that should be found
             var filteredList = words.Where(w => w.Length < wordLength).ToArray();
+
+            // Make combinations and match with current word to find
             for (int i = 0; i < filteredList.Length; i++)
             {
                 for (int j = 0; j < filteredList.Length; j++)
@@ -33,7 +41,7 @@ public class WordsCombiner(string[] words)
             }
         }
 
-        return result;
+        return result.DistinctBy(r => r.Combination).ToList();
     }
 }
 
@@ -44,6 +52,7 @@ public record WordCombination(List<string> Words, string Combination)
 //  Algorithm
 
 //  Loop over all words
+//       Filter out duplicates
 //       Check for each word if it is the required length and keep this in a variable, otherwise go to next one
 //       Create list with only words smaller then word length
 //       Start looping over this and select word at this index
@@ -52,5 +61,6 @@ public record WordCombination(List<string> Words, string Combination)
 
 // Performance improvements
 //  Used arrays instead of linq and enumerables, much faster that way
+//  Use distinct to make list of words smaller
 
 
