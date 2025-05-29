@@ -18,7 +18,8 @@ public class WordCombinerTests
 
     [Theory]
     [MemberData(nameof(TwoWordsCombinations))]
-    public void FindCombinations_GivenInputOfTwoWordsCombinations_ShouldReturnCombinationIfWordAlreadyexists(string[] input, string output)
+    [MemberData(nameof(MultipleWordsCombinations))]
+    public void FindCombinations_GivenInputOfCombinations_ShouldReturnCombinationIfWordAlreadyexists(string[] input, string output)
     {
         // Arrange
         var sut = GetSut();
@@ -70,5 +71,14 @@ public class WordCombinerTests
             new object[] { new string[] { "oobar", "foobar", "f" }, "foobar" },
             new object[] { new string[] { "foobar", "obar", "fo" }, "foobar" },
             new object[] { new string[] { "foobar", "oobar", "f" }, "foobar" },
+        };
+
+    public static IEnumerable<object[]> MultipleWordsCombinations =>
+        new List<object[]>
+        {
+            // two word combinations
+            new object[] { new string[] { "f", "o", "obar", "foobar" }, "foobar" },
+            new object[] { new string[] { "f", "o", "o", "bar", "foobar" }, "foobar" },
+
         };
 }

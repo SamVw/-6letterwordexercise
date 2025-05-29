@@ -6,20 +6,17 @@ public class WordsCombiner()
         if (words.Count() == 0)
             return [];
 
-        var distinctWords = words.Distinct().ToArray();
+        var wordsArray = words.ToArray();
 
-        Console.WriteLine($"Found {distinctWords.Count()} words");
+        Console.WriteLine($"Found {wordsArray.Count()} words");
 
         var result = new List<WordCombination>();
 
-        // Loop over all words of specified length
-        for (int currentWordIndex = 0; currentWordIndex < distinctWords.Length; currentWordIndex++)
+        // Loop over all words of specified length and filter out duplicates
+        var wordsToFind = words.Where(w => w.Length == wordLength).Distinct().ToArray();
+        foreach (var wordToFind in wordsToFind)
         {
-            var wordToFind = distinctWords[currentWordIndex];
-            if (wordToFind.Length != wordLength)
-                continue;
-
-            Console.WriteLine($"Currently searching word {wordToFind} at index {currentWordIndex}");
+            Console.WriteLine($"Currently searching word {wordToFind}");
 
             // Only use words shorter than the length that should be found
             var filteredList = words.Where(w => w.Length < wordLength).ToArray();
@@ -58,6 +55,6 @@ public class WordsCombiner()
 
 // Performance improvements
 //  Used arrays instead of linq and enumerables, much faster that way
-//  Use distinct to make list of words smaller
+//  Use distinct to make list of words to find smaller
 
 
