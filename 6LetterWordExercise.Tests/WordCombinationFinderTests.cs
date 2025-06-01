@@ -1,16 +1,16 @@
 using FluentAssertions;
 using Xunit.Sdk;
 
-public class WordCombinerTests
+public class WordCombinationFinderTests
 {
     [Fact]
-    public void FindCombinations_GivenNoInput_ShouldReturnEmptyResult()
+    public void Find_GivenNoInput_ShouldReturnEmptyResult()
     {
         // Arrange
         var sut = GetSut();
 
         // Act
-        var result = sut.FindCombinations([]);
+        var result = sut.Find([]);
 
         // Assert
         result.Should().BeEmpty();
@@ -19,13 +19,13 @@ public class WordCombinerTests
     [Theory]
     [MemberData(nameof(TwoWordsCombinations))]
     [MemberData(nameof(MultipleWordsCombinations))]
-    public void FindCombinations_GivenInputOfCombinations_ShouldReturnCombinationIfWordAlreadyexists(string[] input, string output)
+    public void Find_GivenInputOfCombinations_ShouldReturnCombinationIfWordAlreadyexists(string[] input, string output)
     {
         // Arrange
         var sut = GetSut();
 
         // Act
-        var result = sut.FindCombinations(input);
+        var result = sut.Find(input);
 
         // Assert
         result.Should().HaveCount(1);
@@ -33,7 +33,7 @@ public class WordCombinerTests
     }
 
     [Fact]
-    public void FindCombinations_GivenDuplicateInputValues_ShouldReturnDistinctCombinations()
+    public void Find_GivenDuplicateInputValues_ShouldReturnDistinctCombinations()
     {
         // Arrange
         string[] words = [
@@ -42,7 +42,7 @@ public class WordCombinerTests
         var sut = GetSut();
 
         // Act
-        var result = sut.FindCombinations(words);
+        var result = sut.Find(words);
 
         // Assert
         result.Count().Should().Be(1);
@@ -50,9 +50,9 @@ public class WordCombinerTests
     }
 
 
-    private static WordsCombiner GetSut()
+    private static WordCombinationFinder GetSut()
     {
-        return new WordsCombiner();
+        return new WordCombinationFinder();
     }
 
     public static IEnumerable<object[]> TwoWordsCombinations =>

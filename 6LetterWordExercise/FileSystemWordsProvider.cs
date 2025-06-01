@@ -1,5 +1,5 @@
 
-class FileWordsProvider(string path) : IWordsProvider
+class FileSystemWordsProvider(string path) : IWordsProvider
 {
     public async Task<IEnumerable<string>> GetWords()
     {

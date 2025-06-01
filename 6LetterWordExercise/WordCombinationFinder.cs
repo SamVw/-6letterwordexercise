@@ -1,48 +1,52 @@
-public class WordsCombiner()
+public class WordCombinationFinder
 {
     static string GetCombination(IEnumerable<string> words) => string.Join(string.Empty, words);
 
-    public IReadOnlyList<WordCombination> FindCombinations(IEnumerable<string> words, int wordLength = 6)
+    public IReadOnlyList<WordCombination> Find(IEnumerable<string> words, int wordLength = 6)
     {
-        // Check if any input provided
-        if (words.Count() == 0)
-            return [];
-
         var wordsArray = words.ToArray();
+
+        // Check if any input provided
+        if (wordsArray.Length == 0)
+            return [];
 
         var result = new List<WordCombination>();
 
         // Loop over all words of specified length and filter out duplicates
-        var wordsToFind = words.Where(w => w.Length == wordLength).Distinct().ToArray();
+        var wordsToFind = wordsArray.Where(w => w.Length == wordLength).Distinct().ToArray();
         foreach (var wordToFind in wordsToFind)
         {
             // Only use words shorter than the length that should be found
-            var filteredList = words.Where(w => w.Length < wordLength).ToArray();
+            var filteredList = wordsArray.Where(w => w.Length < wordLength).ToArray();
 
             // Make combinations and match with current word to find
             for (int i = 0; i < filteredList.Length; i++)
             {
-                List<string> usedWords = [filteredList[i]];
+                List<string> temporaryCombinationList = [filteredList[i]];
                 var startPosition = 0;
                 for (int j = startPosition; j < filteredList.Length; j++)
                 {
                     if (i == j)
                         continue;
 
-                    usedWords.Add(filteredList[j]);
+                    temporaryCombinationList.Add(filteredList[j]);
 
-                    if (GetCombination(usedWords) == wordToFind)
+                    string temporaryCombination = GetCombination(temporaryCombinationList);
+                    bool isCombinationLongerThanSpecifiedLength = temporaryCombination.Length > wordLength;
+                    if (temporaryCombination == wordToFind)
                     {
-                        var combinationExists = DoesCombinationAlreadyExist(result, wordToFind, usedWords);
+                        var combinationExists = DoesCombinationAlreadyExist(result, wordToFind, temporaryCombinationList);
                         if (!combinationExists)
-                            result.Add(new WordCombination([.. usedWords], GetCombination(usedWords)));
-
+                        {
+                            result.Add(new WordCombination([.. temporaryCombinationList], temporaryCombination));
+                            Console.WriteLine($"Found {result.Count()} combinations");
+                        }
                         continue;
                     }
-                    else if (GetCombination(usedWords).Length > wordLength)
+                    else if (isCombinationLongerThanSpecifiedLength)
                     {
                         // reset used words array
-                        usedWords = [filteredList[i]];
+                        temporaryCombinationList = [filteredList[i]];
 
                         // start adding words again from the last start position + 1
                         j = ++startPosition;

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("6LetterWordExercise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cd2a7ad6ca721434f95536c2e1c81fd0f58a664")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1bd51b71cfc972cdfff22038ba3c02e9f0898f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("6LetterWordExercise")]
 [assembly: System.Reflection.AssemblyTitleAttribute("6LetterWordExercise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

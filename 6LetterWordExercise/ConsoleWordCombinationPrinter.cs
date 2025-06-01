@@ -1,6 +1,6 @@
-public class ConsoleWordCombinationPrinter : IWordCombinationPrinter
+public class ConsoleWordCombinationPrinter : ICombinationReporter
 {
-    public void Print(IEnumerable<WordCombination> combinations)
+    public void Report(IEnumerable<WordCombination> combinations)
     {
         foreach (var combination in combinations)
         {
